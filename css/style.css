@@ -36,6 +36,11 @@
   --light-purple: #EDEDF8;
   --black-color: #141414;
   --blue-color: #CCC8E8;
+  --calender-color: #CAFFF3;
+  --Lab-color: #F7FFCC;
+  --info-color:#00FFC1;
+  --social-color: #7061BD;
+  --radius-8: 8px;
   --radius-12: 12px;
   --radius-16: 16px;
   --radius-32: 32px;
@@ -134,6 +139,9 @@ li {
 .text-blue{
   color: var(--blue-color) !important;
 }
+.text-info{
+  color: var(--info-color) !important;
+}
 .bg-primary {
   background-color: var(--primary-color) !important;
 }
@@ -149,7 +157,15 @@ li {
 .bg-purple {
   background-color: var(--light-purple) !important;
 }
-
+.bg-calender{
+  background-color: var(--calender-color) !important;
+}
+.bg-lap{
+  background-color: var(--Lab-color) !important;
+}
+.bg-social{
+  background-color: var(--social-color) !important;
+}
 .border-light {
   border: var(--border-light) !important;
 }
@@ -198,6 +214,9 @@ li {
 /*========================
          radius
   ========================*/
+.rounded-8{
+  border-radius: var(--radius-8) !important;
+}
 .rounded-12 {
   border-radius: var(--radius-12) !important;
 }
@@ -211,11 +230,17 @@ li {
 /*========================
         Spaces
   ========================*/
+.p-10{
+    padding: 10px !important;
+}
 .p-20 {
   padding: 20px !important;
 }
 .p-28 {
   padding: 28px !important;
+}
+.pt-16{
+  padding-top: 16px !important;
 }
 .pt-20{
   padding-top: 20px !important;
@@ -223,8 +248,14 @@ li {
 .pt-24{
   padding-top: 24px !important;
 }
+.pt-28{
+  padding-top: 28px !important;
+}
 .pt-32{
   padding-top: 32px !important;
+}
+.pt-40{
+  padding-top: 40px !important;
 }
 .pt-48{
   padding-top: 48px;
@@ -235,7 +266,12 @@ li {
 .pl-40 {
   padding-left: 40px !important;
 }
-
+.g-5{
+  gap: 5px !important;
+}
+.g-10{
+  gap: 10px !important;
+}
 .g-14 {
   gap: 14px !important;
 }
@@ -253,6 +289,9 @@ li {
 }
 .g-36{
   gap: 36px !important;
+}
+.g-40{
+  gap: 40px !important;
 }
 .h-50 {
   height: 50px !important;
@@ -282,13 +321,21 @@ li {
 .p-block-48 {
   padding-block: 48px !important;
 }
+.m-block-80{
+  margin-block: 80px !important;
+}
 .p-block-80{
   padding-block: 40px !important;
 }
 .p-block-160 {
   padding-block: 160px !important;
 }
-
+.mt-50{
+  margin-top: 50px;
+}
+.pt-50{
+  padding-top: 50px;
+}
 .lh-140 {
   line-height: 140% !important;
 }
@@ -304,6 +351,12 @@ li {
 }
 .pb-48{
   padding-bottom: 48px !important;
+}
+.w-40{
+  width: 40px;
+}
+.h-40{
+  height: 40px;
 }
 .w-310{
   width: 310px !important;
@@ -633,6 +686,15 @@ li {
 /*========================
         partners
   ========================*/
+/*=========================
+accordion
+==========================*/
+.accordion{
+  padding-top: 30px;
+}
+.accordion-button:not(.collapsed){
+  background-color: #5745B2;
+}
   /*========================
          product
   ========================*/
@@ -1188,7 +1250,7 @@ li {
 
 .why-choose-content .box {
   flex: 1;
-  border: 1px solid rgba(253, 255, 255, 0.3);
+  border: 1px solid rgba(253, 253, 255, 0.48);
   border-radius: 16px;
   padding: 24px;
   backdrop-filter: blur(6px);
@@ -1222,7 +1284,7 @@ li {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(95%) sepia(100%) saturate(800%) hue-rotate(55deg) brightness(110%);
+  /* filter: brightness(0) saturate(100%) invert(95%) sepia(100%) saturate(800%) hue-rotate(55deg) brightness(110%); */
 }
 
 /* Active-box link */
@@ -1273,6 +1335,152 @@ li {
   /*========================
            why-choose-content
   ========================*/
+  /*========================
+           answers
+  ========================*/
+.answers .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.answers .accordion-item {
+  border: none;
+  border-radius: 16px !important;
+  overflow: hidden;
+  /* background: #1E1E2F; */
+  border: 1px solid #DFFF00;
+}
+
+.answers .accordion-button {
+  background:#FDFFFF;
+  color: #141414;
+  font-family: var(--font-Medium);
+  font-size: 18px;
+  padding: 20px 24px;
+  box-shadow: none;
+  border: none;
+}
+
+.answers .accordion-button::before {
+  display: none;
+}
+
+.answers .accordion-button::after {
+  content: "";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  margin-right: auto;
+  background-image: url("../img/icon/arrow-down-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+
+.answers .accordion-button.collapsed::after {
+  background-image: url("../img/icon/arrow-down-left.svg");
+}
+
+.answers .accordion-button:not(.collapsed) {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: none;
+  border: none;
+}
+
+.answers .accordion-button:focus {
+  box-shadow: none;
+}
+
+.answers .accordion-collapse {
+  background: var(--primary-color);
+}
+
+.answers .accordion-body {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-regular);
+  padding: 0 24px 20px;
+  line-height: 1.8;
+}
+  /*========================
+           answers
+  ========================*/
+/*========================
+           footer
+  ========================*/
+  .footer{
+    /* background-image: url(../img/background/Footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 620px !important;
+    height: 100% !important;
+    padding: 80px 0;
+    width: 100%;
+    overflow: hidden; */
+
+
+     width: 100%;
+    min-height: 574px;
+    background-image: url('../img/background/Footer.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 80px 0;
+    position: relative;
+  }
+
+
+  .footer-content {
+    width: 100%;
+    text-align: right;
+}
+
+.footer-logos {
+    margin-bottom: 20px;
+}
+
+.footer-logos img {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.footer-label {
+    margin: 20px 0 10px;
+}
+
+.bg-social {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.bg-social img {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 20px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
+ 
 /* =====================================
           RESPONSIVE 
 ===================================== */

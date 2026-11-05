@@ -143,3 +143,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+// ---- Projects Swiper Navigation ----
+document.addEventListener('DOMContentLoaded', function () {
+
+    const projectsSwiperEl = document.querySelector('#visionsSwiper');
+    const projectsNextBtn = document.querySelector('.projects-nav-next');
+    const projectsPrevBtn = document.querySelector('.projects-nav-prev');
+
+    if (projectsSwiperEl) {
+        // Apply responsive breakpoints
+        Object.assign(projectsSwiperEl, {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                },
+            },
+        });
+        projectsSwiperEl.initialize();
+
+        if (projectsNextBtn) {
+            projectsNextBtn.addEventListener('click', function () {
+                if (projectsSwiperEl.swiper) {
+                    projectsSwiperEl.swiper.slidePrev();
+                }
+            });
+        }
+        if (projectsPrevBtn) {
+            projectsPrevBtn.addEventListener('click', function () {
+                if (projectsSwiperEl.swiper) {
+                    projectsSwiperEl.swiper.slideNext();
+                }
+            });
+        }
+    }
+
+});
+
