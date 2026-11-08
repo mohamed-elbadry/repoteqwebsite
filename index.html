@@ -17,7 +17,7 @@
 
 <body>
     <!--nav-->
-    <nav class="uper-nav navbar navbar-expand-lg py-3" id="upNav">
+    <nav class="uper-nav navbar navbar-expand-lg py-3 fixed-top" id="upNav">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="img/logo/logo1.svg" alt="logo" class="pl-40">
@@ -25,7 +25,8 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon menu-icon"></span>
+                 <img src="img/icon/close.svg" alt="Close" class="exit-icon d-none">
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -251,7 +252,7 @@
     <!--swiper-->
     <!--Work-->
     <div class="container">
-        <div class="work d-flex align-items-center justify-content-between">
+        <!-- <div class="work d-flex align-items-center justify-content-between">
             <div class="d-flex g-24 align-items-center">
                 <div class="image bg-purple d-flex text-aliggn-center justify-content-center rounded-12 p-20">
                     <img src="img/icon/user.svg" alt="user">
@@ -267,7 +268,7 @@
                     <img src="img/icon/trophie.svg" alt="trophie">
                 </div>
                 <div class="d-flex flex-column g-20">
-                    <h2 class="fs-28 fw-bold text-primary">10 +</h2>
+                    <h2 class="fs-28 fw-bold text-primary">20 +</h2>
                     <p class="fs-16 fw-regular text-secound">سنوات شهدت تفوقنا</p>
                 </div>
             </div>
@@ -287,17 +288,69 @@
                     <img src="img/icon/users.svg" alt="project">
                 </div>
                 <div class="d-flex flex-column g-20">
-                    <h2 class="fs-28 fw-bold text-primary">150 +</h2>
-                    <p class="fs-16 fw-regular text-secound">فريق عمل متخصص</p>
+                    <h2 class="fs-28 fw-bold text-primary">50 +</h2>
+                    <p class="fs-16 fw-regular text-secound">عميل من مختلف القطاعات</p>
                 </div>
             </div>
+        </div> -->
+    
+    <div class="work d-flex align-items-center justify-content-between flex-wrap">
+
+    <div class="d-flex g-24 align-items-center">
+        <div class="image bg-purple d-flex justify-content-center rounded-12 p-20">
+            <img src="img/icon/user.svg" alt="user">
         </div>
+        <div class="stats-card d-flex flex-column g-20">
+            <h2 class="fs-28 fw-bold text-primary">
+                <span class="counter" data-target="10">0</span> +
+            </h2>
+            <p class="fs-16 fw-regular text-secound">فريق عمل متخصص</p>
+        </div>
+    </div>
+
+    <div class="stats-card d-flex g-24 align-items-center">
+        <div class="image bg-purple d-flex justify-content-center rounded-12 p-20">
+            <img src="img/icon/trophie.svg" alt="trophie">
+        </div>
+        <div class="d-flex flex-column g-20">
+            <h2 class="fs-28 fw-bold text-primary">
+                <span class="counter" data-target="20">0</span> +
+            </h2>
+            <p class="fs-16 fw-regular text-secound">سنوات شهدت تفوقنا</p>
+        </div>
+    </div>
+
+    <div class="stats-card d-flex g-24 align-items-center">
+        <div class="image bg-purple d-flex justify-content-center rounded-12 p-20">
+            <img src="img/icon/projects.svg" alt="project">
+        </div>
+        <div class="d-flex flex-column g-20">
+            <h2 class="fs-28 fw-bold text-primary">
+                <span class="counter" data-target="150">0</span> +
+            </h2>
+            <p class="fs-16 fw-regular text-secound">مشروع مكتمل</p>
+        </div>
+    </div>
+
+    <div class="stats-card d-flex g-24 align-items-center">
+        <div class="image bg-purple d-flex justify-content-center rounded-12 p-20">
+            <img src="img/icon/users.svg" alt="project">
+        </div>
+        <div class="d-flex flex-column g-20">
+            <h2 class="fs-28 fw-bold text-primary">
+                <span class="counter" data-target="50">0</span> +
+            </h2>
+            <p class="fs-16 fw-regular text-secound">عميل من مختلف القطاعات</p>
+        </div>
+    </div>
+
+</div>
     </div>
     <!--Work-->
     <!--partners-->
     <div class="partners p-block-80">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
                 <div class="d-flex flex-column g-20">
                     <h2 class="fw-bold fs-36 text-black"> شركاء ريبوتك</h2>
                     <p class="fw-regular fs-20 text-secound"> شركاء النجاح في رحلتنا الرقمية</p>
@@ -389,7 +442,7 @@
     <!--products-->
     <div class="product pb-48">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
                 <div class="d-flex flex-column g-20">
                     <h2 class="fw-bold fs-36 text-black">أبرز منتجات ريبوتك</h2>
                     <p class="fw-regular fs-20 text-secound"> منتجات رقمية مصممة لتساعد الشركات على إدارة أعمالها بكفاءة
@@ -539,7 +592,7 @@
    <!--offer-->
    <div class="offer p-block-80">
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
             <div class="d-flex flex-column g-20">
                 <h2 class="fw-bold fs-36 text-black">ماذا يمكننا أن نقدم</h2>
                 <p class="fw-regular fs-20 text-secound">نقدم لك مجموعة شاملة من خدمات ريبوتك المتكاملة التي تلبي جميع متطلبات
@@ -827,7 +880,7 @@
     <!--experiments-->
     <div class="expriment p-block-80">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
             <div class="d-flex flex-column g-20">
                 <h2 class="fw-bold fs-36 text-black">أفكار تحوّلت إلى تجارب رقمية</h2>
                 <p class="fw-regular fs-20 text-secound">
@@ -952,16 +1005,16 @@
     <div class="answers p-block-80">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12">
                    <div class="d-flex flex-column g-36">
                     <h2 class="fs-36 fw-bold text-black">إجابات تساعدك تبدأ بثقة</h2>
-                    <p class="fs-20 fw-regular text-secound">تعرّف على إجابات الأسئلة الشائعة حول خدمات ريبوتك وخطوات تنفيذ مشروعك.</p>
+                    <p class="fs-20 fw-regular text-secound">تعرّف على إجابات الأسئلة الشائعة حول خدمات ريبوتك. <br>وخطوات تنفيذ مشروعك.</p>
                     <div class="image-answer">
                         <img src="img/landing/answers.png" alt="answers">
                     </div>
                    </div> 
                 </div>
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12">
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -1028,14 +1081,14 @@
     <!---Visions-->
     <div class="visions p-block-80">
         <div class="container">
-               <div class="d-flex align-items-center justify-content-between">
+               <div class="d-flex align-items-center justify-content-between flex-wrap">
             <div class="d-flex flex-column g-20">
                 <h2 class="fw-bold fs-36 text-black">رؤى رقمية تدعم نمو أعمالك</h2>
                 <p class="fw-regular fs-20 text-secound">
                    اكتشف مقالات وأفكارًا تساعدك على فهم الحلول التقنية واختيار الأنسب لتطوير أعمالك.
                   </p>
             </div>
-            <div class="show d-flex flex-column align-items-center flex-nowrap flex-sm-wrap">
+            <div class="show d-flex flex-column align-items-center flex-nowrap flex-sm-wrap pt-sm-3">
                 <img src="img/icon/show.svg" alt="" class="show-bg">
                 <button class="show-btn text-primary bg-white py-2 px-4 rounded-12 border-blue h-60" type="submit">
                     المزيد من المقالات
@@ -1159,10 +1212,10 @@
              <!-- Projects Swiper Navigation Arrows -->
         <div class="container">
             <div class="product-swiper-nav">
-                <button class="projects-nav-btn projects-nav-next" type="button" aria-label="السابق">
+                <button id="visionsPrev" class="projects-nav-btn projects-nav-next" type="button" aria-label="السابق">
                     <img src="img/icon/arrow-right.svg" alt="Previous" class="nav-arrow-icon">
                 </button>
-                <button class="projects-nav-btn projects-nav-prev" type="button" aria-label="التالي">
+                <button id="visionsNext" class="projects-nav-btn projects-nav-prev" type="button" aria-label="التالي">
                     <img src="img/icon/arrow-left.svg" alt="Next" class="nav-arrow-icon">
                 </button>
             </div>
@@ -1173,58 +1226,117 @@
     <!--footer-->
     <div class="footer pt-50">
         <div class="container">
-           <div class="row pt-50">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center g-40">
+            <div class="footer-content">
+                <div class="d-flex align-items-center justify-content-between">
+                     <div class="d-flex align-items-center g-40 flex-wrap flex-md-wrap">
                     <img src="img/logo/Logo3.png" alt="logo-3">
                     <img src="img/logo/vision.png" alt="logo-3">
                 </div>
-                <h2 class="fw-regular text-white fs-24 pt-40">من مواقع الشركات والمتاجر الإلكترونية إلى حلول إدارة المحتوى الحديثة (CMS) وتجارب العملاء الرقمية (DXP)، نطوّر حلولًا تقنية تساعد أعمالك على النمو بثقة.</h2>
-                <p class="fw-medium fs-14 text-info pt-28">ساعات العمل:</p>
-                <div class="d-flex align-items-center g-10  pt-20">
-                    <img src="img/icon/clock.svg" alt="clock">
-                    <p class="fw-medium fs-16 text-white m-0 p-0">من السبت الى الأحد | 10:00 AM – 10:00 PM</p>
+                 <img src="img/background/squares.png" alt="squares" class="footer-squares">
                 </div>
+               
 
-                <p class="fw-medium fs-14 text-info pt-28">تابعنا:</p>
-                <div class="d-flex align-items-center g-10 pt-16">
-                    <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
-                       <a href="#">
-                        <img src="img/icon/snapchat.svg" alt="snap">
-                       </a>
+                <div class="row footer-row">
+                    <div class="col-md-6">
+                        <h2 class="fw-regular text-white fs-24 pt-40">من مواقع الشركات والمتاجر الإلكترونية إلى حلول إدارة المحتوى
+                            الحديثة (CMS) وتجارب العملاء الرقمية (DXP)، نطوّر حلولًا تقنية تساعد أعمالك على النمو بثقة.</h2>
+                        <p class="fw-medium fs-14 text-info pt-28">ساعات العمل:</p>
+                        <div class="location d-flex align-items-center g-10  pt-20">
+                            <img src="img/icon/clock.svg" alt="clock">
+                            <p class="fw-medium fs-16 text-white m-0 p-0">من السبت الى الأحد | 10:00 AM – 10:00 PM</p>
+                        </div>
+                        <p class="fw-medium fs-14 text-info pt-28">تابعنا:</p>
+                        <div class="d-flex align-items-center g-10 pt-16">
+                            <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
+                                <a href="#">
+                                    <img src="img/icon/snapchat.svg" alt="snap">
+                                </a>
+                            </div>
+                            <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
+                                <a href="#">
+                                    <img src="img/icon/facebook.svg" alt="facebook">
+                                </a>
+                            </div>
+                
+                            <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
+                                <a href="#">
+                                    <img src="img/icon/twitter.svg" alt="twitter">
+                                </a>
+                            </div>
+                
+                            <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
+                                <a href="#">
+                                    <img src="img/icon/linkedin.svg" alt="linkedin">
+                                </a>
+                            </div>
+                
+                            <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
+                                <a href="#">
+                                    <img src="img/icon/tiktok.svg" alt="ticktok">
+                                </a>
+                            </div>
+                
+                            <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
+                                <a href="#">
+                                    <img src="img/icon/instagram.svg" alt="instagram">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
-                       <a href="#">
-                        <img src="img/icon/facebook.svg" alt="facebook">
-                       </a>
-                    </div>
+                    <div class="col-md-3">
+                         <p class="fw-medium fs-14 text-info pt-28"> تواصل معنا</p>
+                         <h2 class="pt-28 fw-medium fs-14 text-yellow">الموقع :</h2>
+                        <div class="location d-flex align-items-center g-10 pt-16">
+                            <img src="img/icon/location.svg" alt="location">
+                            <p class="fw-regular fs-14 text-white m-0 p-0 lh-150">السعودية: شارع الخزان، الرياض — برج الخالدية، الدور 17، مكتب 41707.</p>
+                        </div>
+                        <div class="location d-flex align-items-center g-10 pt-16">
+                            <img src="img/icon/location.svg" alt="location">
+                            <p class="fw-regular fs-14 text-white m-0 p-0 lh-150">مصر: محافظة الغربية.</p>
+                        </div>
 
-                    <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
-                       <a href="#">
-                        <img src="img/icon/twitter.svg" alt="twitter">
-                       </a>
-                    </div>
+                          <h2 class="pt-28 fw-medium fs-14 text-yellow">رقم الهاتف</h2>
+                        <div class="location d-flex align-items-center g-10 pt-16">
+                            <img src="img/icon/phone.svg" alt="phone">
+                            <a href="tel:01021193813" target="_blank" class="fw-regular fs-14 text-white m-0 p-0 lh-150">01021193813  <span class="p-inline-10">.</span> </a>
+                            <a href="tel: 0101114669115" target="_blank" class="fw-regular fs-14 text-white m-0 p-0 lh-150"> 0101114669115</a>
+                        </div>
 
-                    <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
-                       <a href="#">
-                        <img src="img/icon/linkedin.svg" alt="linkedin">
-                       </a>
+                         <h2 class="pt-28 fw-medium fs-14 text-yellow">البريد الألكتروني</h2>
+                        <div class="location d-flex align-items-center g-10 pt-16">
+                            <img src="img/icon/envelope.svg" alt="envelope">
+                            <a href="mailto:info@repoteq.com" target="_blank" class="fw-regular fs-14 text-white m-0 p-0 lh-150">info@repoteq.com</a>
+                        </div>
                     </div>
-
-                    <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
-                       <a href="#">
-                        <img src="img/icon/tiktok.svg" alt="ticktok">
-                       </a>
+                    <div class="col-md-3">
+                        <p class="fw-medium fs-14 text-info pt-28">روابط سريعة</p>
+                        <ul class="footer-sociel">
+                            <li class="pt-20">
+                                <a href="#" class="fw-medium fs-16 lh-150 text-white">من نحن</a>
+                            </li>
+                             <li class="pt-20">
+                                <a href="#" class="fw-medium fs-16 lh-150 text-white">خدماتنا</a>
+                            </li>
+                             <li class="pt-20">
+                                <a href="#" class="fw-medium fs-16 lh-150 text-white">منتجاتنا</a>
+                            </li>
+                             <li class="pt-20">
+                                <a href="#" class="fw-medium fs-16 lh-150 text-white">معرض الأعمال</a>
+                            </li>
+                            <li class="pt-20">
+                                <a href="#" class="fw-medium fs-16 lh-150 text-white">المدونة</a>
+                            </li>
+                             <li class="pt-20">
+                                <a href="#" class="fw-medium fs-16 lh-150 text-white">تواصل معنا</a>
+                            </li>
+                        </ul>
                     </div>
-
-                     <div class="image bg-social d-flex align-items-center justify-content-center w-40 h-40">
-                       <a href="#">
-                        <img src="img/icon/instagram.svg" alt="instagram">
-                       </a>
-                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="pt-40 fs-16 fw-medium text-white">جميع الحقوق محفوظة لريبوتك © 2026</p>
                 </div>
             </div>
-           </div>
+           
         </div>
     </div>
     <!--footer-->

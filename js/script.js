@@ -1,3 +1,17 @@
+const navbarCollapse = document.getElementById('navbarSupportedContent');
+const menuIcon = document.querySelector('.menu-icon');
+const exitIcon = document.querySelector('.exit-icon');
+
+navbarCollapse.addEventListener('show.bs.collapse', function () {
+    menuIcon.classList.add('d-none');
+    exitIcon.classList.remove('d-none');
+});
+
+navbarCollapse.addEventListener('hide.bs.collapse', function () {
+    exitIcon.classList.add('d-none');
+    menuIcon.classList.remove('d-none');
+});
+//************************** */
 document.addEventListener("DOMContentLoaded", function () {
 
     const navLinks = document.querySelectorAll(
@@ -187,5 +201,88 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+});
+//--------------------------------//
+const visionsSwiper = document.querySelector("#visionsSwiper");
+
+const swiperParams = {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    speed: 1000,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        },
+    },
+};
+
+Object.assign(visionsSwiper, swiperParams);
+
+visionsSwiper.initialize();
+
+// Next Button
+document.querySelector("#visionsNext").addEventListener("click", () => {
+    visionsSwiper.swiper.slideNext();
+});
+
+// Previous Button
+document.querySelector("#visionsPrev").addEventListener("click", () => {
+    visionsSwiper.swiper.slidePrev();
+});
+
+//========================================
+
+const counters = document.querySelectorAll('.counter');
+
+const speed = 3000; // مدة العد 3 ثواني
+
+const startCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const duration = speed;
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+
+        const currentNumber = Math.floor(progress * target);
+
+        counter.innerText = currentNumber;
+
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+        } else {
+            counter.innerText = target;
+        }
+    }
+
+    requestAnimationFrame(updateCounter);
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounter(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+counters.forEach(counter => {
+    observer.observe(counter);
 });
 
