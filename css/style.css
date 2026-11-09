@@ -48,6 +48,7 @@
   --border-blue: 1px solid #CCC8E8;
   --border-card: 1px solid #f8fafa;
   --border-side: 1px solid #E7EDED;
+  --border-form: 1px solid #DBDAF0;
   --font-12: 12px;
   --font-14: 14px;
   --font-16: 16px;
@@ -84,7 +85,7 @@ body {
   background-color: #F8F7FD;
   direction: rtl;
   margin: 0;
-  padding: 0;
+ padding-top: 90px;
 }
 
 a {
@@ -98,6 +99,7 @@ h6,
 p,
 h2 {
   margin: 0;
+  /* line-height: 0px !important; */
 }
 
 ul {
@@ -177,6 +179,9 @@ li {
 }
 .border-side{
   border: var(--border-side) !important;
+}
+.border-form{
+  border: var(--border-form) !important;
 }
 /*========================
         font-size
@@ -263,6 +268,9 @@ li {
 .pt-55{
   padding-top: 55px;
 }
+.pt-95{
+  padding-top: 95px;
+}
 .pl-40 {
   padding-left: 40px !important;
 }
@@ -300,8 +308,20 @@ li {
 .h-60 {
   height: 60px !important;
 }
+.p-block-15{
+  padding-block: 15px !important;
+}
+.p-block-60{
+  padding-block: 60px;
+}
 .p-inline-10{
   padding-inline: 10px !important;
+}
+.p-inline-60{
+  padding-inline: 60px;
+}
+.p-inline-40{
+  padding-inline: 40px;
 }
 .p-inline-32 {
   padding-inline: 32px !important;
@@ -328,10 +348,13 @@ li {
   margin-block: 80px !important;
 }
 .p-block-80{
-  padding-block: 40px !important;
+  padding-block: 80px !important;
 }
 .p-block-160 {
   padding-block: 160px !important;
+}
+.pb-75{
+  padding-bottom: 75px;
 }
 .mt-50{
   margin-top: 50px;
@@ -366,6 +389,15 @@ li {
 }
 .h-210{
   height: 210px !important;
+}
+.w-384{
+  max-width: 384px !important;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-36 {
+  margin-bottom: 36px;
 }
 /*========================
         hover
@@ -631,7 +663,7 @@ li {
 /*========================
         partners
   ========================*/
- .show {
+ /* .show {
     position: relative;
     width: fit-content;
      transition: all 0.25s ease;
@@ -639,7 +671,7 @@ li {
 .show:hover{
     transform: translateY(-2px);
     color: var(--primary-color) !important;
-}
+} */
 .show-bg {
     position: absolute;
     width: 200px;
@@ -1451,7 +1483,7 @@ accordion
     overflow: hidden; */
 
 
-     width: 100%;
+    width: 100%;
     min-height: 574px;
     background-image: url('../img/background/footerback-bg.png');
     background-repeat: no-repeat;
@@ -1492,6 +1524,7 @@ accordion
     height: 40px;
     background: rgba(255, 255, 255, 0.15);
     transition: all 0.25s ease;
+    border-radius: 5px;
 }
 .bg-social:hover {
     background-color: #F8F7FD;
@@ -1547,6 +1580,214 @@ accordion
 .footer .location{
   cursor: pointer;
 }
+/* =====================================
+          about 
+===================================== */
+.about{
+  background: url(../img/background/about-bg.png) center center / cover no-repeat;
+  background-position: center left;
+    width: 100%;
+    height: 300px;
+     position: relative;
+    overflow: hidden;
+}
+.about-content {
+    gap: 15px;
+}
+
+
+.image-squares {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: 1;
+}
+
+.image-squares img {
+    display: block;
+    width: 145px;
+    max-width: 100%;
+    height: auto;
+}
+/* .squares{
+  display: flex;
+  justify-content: left;
+} */
+/* =====================================
+          goals
+===================================== */
+.goals{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+.goals .card img{
+  width: 120px;
+  height: 120px;
+}
+.goals-wrapper {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20px;
+}
+
+.goals-bg {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.goals-row {
+    margin-top: -19%;
+}
+
+.goals-row .card {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    padding: 32px 24px;
+    box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12);
+}
+
+.goals-row .card-img-top {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.goals-row .card-body {
+    padding: 15px 0 0;
+}
+
+@media (max-width: 991px) {
+    .goals-bg {
+        height: 200px;
+    }
+
+    .goals-row {
+        margin-top: -100px;
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .goals-bg {
+        height: 160px;
+    }
+
+    .goals-row {
+        margin-top: -70px;
+    }
+}
+
+/* =====================================
+             ask
+===================================== */
+
+/* Form */
+
+/* Fields */
+.form-field {
+    position: relative;
+    width: 100%;
+}
+
+.form-field .form-control {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #DBDAF0;
+    border-radius: 9px;
+    background-color: #F8FAFA;
+    font-size: 13px;
+    padding: 10px 15px;
+    padding-left: 42px;
+    box-shadow: none;
+}
+
+/* .form-field .form-control:focus {
+    border-color: #5846B7;
+    background-color: #FFFFFF;
+} */
+
+.form-field .form-control::placeholder {
+    color: #777777;
+    opacity: 1;
+}
+
+/* Icons */
+.field-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5846B7;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+/* Phone */
+.phone-field .form-control {
+    padding-left: 85px;
+}
+
+.phone-code {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #555555;
+}
+
+.phone-code img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+/* Message */
+.message-field textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+    padding: 12px 15px;
+}
+
+/* Submit Button */
+.form-submit {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #5846B7;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    min-width: 100px;
+    height: 60px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45349F;
+    transform: translateY(-2px);
+}
+
 /* =====================================
           RESPONSIVE 
 ===================================== */
@@ -1710,3 +1951,149 @@ accordion
         border-bottom: none;
     }
 }
+/* @media screen and (min-width: 1600px) and (max-width: 1920px) {
+    .work {
+        box-shadow: 0px -12px 32px rgba(112, 144, 176, 0.12);
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 16px 24px;
+        position: relative;
+        z-index: 8;
+        margin-top: -10% !important;
+    } */
+
+
+
+
+
+/* ==============================
+   Contact Section
+============================== */
+
+.contact-section {
+    padding-block: 80px;
+    overflow: hidden;
+}
+
+.contact-row {
+    --bs-gutter-x: 40px;
+}
+
+/* ==============================
+   Contact Image
+============================== */
+
+.contact-image-col {
+    min-height: 100%;
+}
+
+.contact-image {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    position: relative;
+    border-radius: 32px;
+}
+
+.contact-image > img:first-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    border-radius: 32px;
+}
+.contact-decoration {
+      position: absolute;
+    width: 126px;
+    height: auto;
+    bottom: -40px;
+    inset-inline-start: -90px;
+    z-index: 2;
+}
+
+
+/* ==============================
+   Contact Form Card
+============================== */
+
+.contact-form-card {
+    background-color: #FDFFFF;
+    border-radius: 32px;
+    padding: 60px 40px;
+    box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12);
+}
+
+
+.required {
+    color: #CC2D30;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    inset-inline-start: 13%;
+}
+
+/* ==============================
+   Phone Input
+============================== */
+
+.phone-code {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 8px;
+    border-right: 1px solid #D7DCDC;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5A5B5B;
+    white-space: nowrap;
+}
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 991px) {
+
+    .contact-image {
+        min-height: 400px;
+    }
+
+    .contact-form-card {
+        padding: 40px 30px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .contact-section {
+        padding-block: 40px;
+    }
+
+    .contact-row {
+        --bs-gutter-x: 0;
+    }
+
+    .contact-image {
+        min-height: 300px;
+    }
+
+    .contact-decoration {
+        width: 75px;
+        inset-inline-start: -10px;
+    }
+
+    .contact-form-card {
+        padding: 30px 20px;
+        border-radius: 24px;
+    }
+
+
+}
+
+
+
+
+    
